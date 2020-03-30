@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	*{
+		
+	}
+	table{
+		border: 5px solid white;
+
+	}
+	fieldset{
+		width: 500px;
+		text-align: left;
+	}
+
+
+	</style>
+<script>
+
+  function checkForm(form)
+  {
+    // validation fails if the input is blank
+    if(form.FirstName.value == "") {
+      alert("Error: FirstName is empty!");
+      form.FirstName.focus();
+    }
+
+    // regular expression to match only alphanumeric characters and spaces
+    var re = /^[\w ]+$/;
+
+    // validation fails if the input doesn't match our regular expression
+    if(!re.test(form.FirstName.value)) {
+      alert("Error: FirstName contains invalid characters!");
+      form.FirstName.focus();
+
+    }
+  }
+
+</script>
+</head>
+<body bgcolor="blue">
+
+<div align="middle" style="color: white">
+	<h1 style="color: white">Registration Form</h1>
+	<h3 style="color: white">Created By Dhruv Kava (18CE041)</h3>
+	
+<form method="POST" action=" " onsubmit="return checkForm(this);">
+	 <fieldset><legend><b>Registration Details..</b></legend>
+
+					<table border="0" frame="void" cellpacing="0px" cellpadding="12px" bgcolor=" white" height="500px" width="500px">
+
+						<tr align="center" bgcolor="black">
+							<td >
+								<label for="FN">First Name:</label>
+							</td>
+							<td colspan="2" border="">
+								<input type="text" name="FirstName" id="FN" style="width:100%; background-color: blue;color: white; " placeholder="First Name">
+								(must contain alphanumeric characters and space)
+							</td>
+						</tr>
+
+						<tr align="center" bgcolor="black">
+							<td >
+								<label for="LN">Last Name:</label>
+							</td>
+							<td>
+								<input type="text" name="LastName" id="LN" style="width:100%; background-color: blue;color: white; " placeholder="Last Name" required>
+							</td>
+						</tr>
+						<tr align="center" bgcolor="black">
+							<td >
+								<label>Gender:</label>
+							</td>
+							<td>
+								<label for="male">Male</label>
+								<input type="radio" name="gender" id="male" required>
+
+								<label for="female">Female</label>
+								<input type="radio" name="gender" id="female" required>
+
+								<label for="other">Other</label>
+								<input type="radio" name="gender" id="other" required>
+							</td>
+						</tr>
+						<tr align="center"  bgcolor="black">
+							<td>
+								<label for="dob">Date Of Birth:</label>
+							</td>
+							<td>
+								<input type="date" name="date" style="width:100%; background-color: blue;color: white; " id="dob">
+							</td>
+						</tr>
+						<tr align="center"bgcolor="black">
+							<td>
+								<label for="city">City:</label>
+							</td>
+							<td>
+								<select name="city" id="city" style="width:100%; background-color: blue;color: white; " required>
+									<option value="Vadodara">Vadodara</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Bhopal">Bhopal</option>
+									<option value="Mumbai">Mumbai</option>
+									<option value="Bangalore">Bangalore</option>
+									<option value="Hyderabad">Hyderabad</option>
+									<option value="Kanpur">Kanpur</option>
+									<option value="Nagpur">Nagpur</option>
+									<option value="Ahmedabad">Ahmedabad</option>
+									<option value="Junagadh">Junagadh</option>
+									<option value="Pune">Pune</option>
+									<option value="Surat">Surat</option>
+
+								</select>
+							</td>
+						</tr>
+						<tr align="center" bgcolor="black">
+							<td>
+								<label for="state">State:</label>
+							</td>
+							<td>
+								<select name="state" id="state" style="width:100%; background-color: blue;color: white; " required>
+									<option value="Gujarat">Goa</option>
+									<option value="Maharastra">Maharastra</option>
+									<option value="AndhraPradesh">Andhra Pradesh</option>
+									<option value="Goa">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="HimachalPradesh">Himachal Pradesh</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="MadhyaPradesh">Madhya Pradesh</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="TamilNadu">TamilNadu</option>
+
+								</select>
+							</td>
+						</tr>
+						<tr align="center" bgcolor="black">
+							<td>
+								<label for="emailid">Email ID:</label>
+							</td>
+							<td>
+								<input type="email" name="email" id="emailid" style="width:100%; background-color: blue;color: white; " placeholder="Email ID" required>
+							</td>
+						</tr>
+						<tr align="center" bgcolor="black">
+							<td>
+								<label for="phoneNo">Phone No.:</label>
+							</td>
+							<td>
+								<input type="tel" name="phoneno" id="phoneNo" style="width:100%; background-color: blue;color: white; " pattern="[0-9]{10}"  placeholder="{2}{10}"  required>
+							</td>
+						</tr>
+						<tr align="center"  bgcolor="black">
+							<td colspan="2">
+
+			      	<input type="submit" name="submit" style="font-size: 20px; color: white; width:40%; height:140%;background-color:blue" value="submit" autofocus>
+							<input type="reset" name="reset" style="font-size: 20px; color: white; width:40%;height:140%;background-color:blue"  value="reset">
+							</td>
+						</tr>
+
+					</table>
+
+				 </fieldset>
+				</form>
+				</div>
+</body>
+</html>
